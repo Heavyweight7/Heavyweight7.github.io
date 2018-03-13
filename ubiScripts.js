@@ -44,6 +44,20 @@ function checkMyCookie()
 	}
 	
 	
+	//example code
+	/*if (user != "") 
+	{
+        alert("Welcome again " + user);
+    } 
+	else 
+	{
+        user = prompt("Please enter your name:", "");
+        if (user != "" && user != null) 
+		{
+            setCookie("username", user, 365);
+        }*/
+	
+	
 }
 
 function setCookie(cname, cvalue, exdays)
@@ -64,7 +78,7 @@ function getCookie(cname)
 		var c = ca[i];
 		while (c.charAt(0) == '')//infinite loop
 		{
-			c = c.substring(1);
+			c = c.subString(1);
 		}
 		if(c.indexOf(name) == 0)
 		{
