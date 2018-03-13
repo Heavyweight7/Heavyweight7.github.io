@@ -76,7 +76,7 @@ function getCookie(cname)
 	for (var i = 0; i < ca.length; i++)
 	{
 		var c = ca[i];
-		while (c.charAt(0) == '')//infinite loop
+		while (c.charAt(0) == '')
 		{
 			c = c.subString(1);
 		}
