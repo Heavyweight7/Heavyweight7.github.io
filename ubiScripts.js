@@ -26,6 +26,7 @@ function newPage()
 //in the code based on that value, if no then create new cookie. also update cookie each time 
 //the player does something important.
 
+//display current state
 function checkState()
 {
 	var user = getCookie("username");
