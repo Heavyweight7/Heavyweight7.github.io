@@ -17,6 +17,11 @@ function myFunction()
 	document.getElementById("demo").innerHTML = "asdf";
 }
 
+function newPage()
+{
+	window.location.href = "http://heavyweight7.github.io/ubiWaiting";
+}
+
 //TODO: check if new user has a cookie, if yes check value of that cookie and skip to a specified place 
 //in the code based on that value, if no then create new cookie. also update cookie each time 
 //the player does something important.
