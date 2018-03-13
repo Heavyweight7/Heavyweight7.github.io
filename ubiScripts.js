@@ -26,17 +26,25 @@ function newPage()
 //in the code based on that value, if no then create new cookie. also update cookie each time 
 //the player does something important.
 
+function checkState()
+{
+	var user = getCookie("username");
+	document.getElementById("demo2").innerHTML = user;
+}
+
+
 //store progress in document.cookie username
 
 function checkMyCookie()
 {
+	//document.getElementById("demo").innerHTML = "in checkCookie";
 	var user = getCookie("username");
-	
+	//document.getElementById("demo").innerHTML = "user set";
 	switch (user)
 	{
 	case "":
-	user = prompt("enter:", "");
-	setCookie("username", user, 10);
+	user = "state 1";
+	setCookie("username", user, 1);
 	break;
 	//finish this
 	default:
@@ -47,16 +55,18 @@ function checkMyCookie()
 	//example code
 	/*if (user != "") 
 	{
+		document.getElementById("demo").innerHTML = "in if";
         alert("Welcome again " + user);
     } 
 	else 
 	{
+		document.getElementById("demo").innerHTML = "in else";
         user = prompt("Please enter your name:", "");
         if (user != "" && user != null) 
 		{
-            setCookie("username", user, 365);
-        }*/
-	
+            setCookie("username", user, 1);
+        }
+	}*/
 	
 }
 
