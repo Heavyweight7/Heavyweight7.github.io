@@ -31,6 +31,37 @@ function newPage()
 
 //display current state
 
+function localStore()
+{
+	document.getElementById("demo").innerHTML = "in local store";
+	// Check browser support
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "Smith");
+    // Retrieve
+    document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
+} else {
+    document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+}
+
+
+function getStored()
+{
+	if (typeof(Storage) !== "undefined") {
+    // Store
+    //localStorage.setItem("lastname", "Smith");
+    // Retrieve
+    document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
+	alert(localStorage.getItem("lastname"));
+} else {
+    document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+}
+
+
+
+/*
 function editState()
 {
 	document.getElementById("demo").innerHTML = "user editState";
@@ -80,7 +111,7 @@ function checkMyCookie()
 	if (user == "state 1")
 	{
 		document.getElementById("demo").innerHTML = "state 1 if checked";
-	}*/
+	}
 	
 	
 	
@@ -133,7 +164,7 @@ function getCookie(cname)
 	}
 	//document.getElementById("demo").innerHTML = " in getCookie while";
 	return "error";
-}
+}*/
 
 
 
