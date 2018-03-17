@@ -31,20 +31,25 @@ function newPage()
 
 //display current state
 
-function editState(newState)
+function editState()
 {
+	document.getElementById("demo").innerHTML = "user editState";
+	//document.cookie = "setUserId=state 2";
+	document.getElementById("demo").innerHTML = "cookie editState";
 	var user = getCookie("username");
-	user = newState;
+	document.getElementById("demo").innerHTML = "getCookie editState";
+	user = "state 2";
 	setCookie("username", user, 1);
+	alert(user);
 }
 
 function checkState()
 {
-	
+	document.getElementById("demo").innerHTML = "user checkState";
 	var user = getCookie("username");
-	document.getElementById("demo").innerHTML = " ran getCookie";
+	//document.getElementById("demo").innerHTML = " ran getCookie";
 	document.getElementById("demo2").innerHTML = user;
-	alert("test");
+	alert("test" + user);
 }
 
 
@@ -52,23 +57,35 @@ function checkState()
 
 function checkMyCookie()
 {
-	//document.getElementById("demo").innerHTML = "in checkCookie";
+	document.getElementById("demo").innerHTML = "in checkCookie";
 	var user = getCookie("username");
 	//document.getElementById("demo").innerHTML = "user set";
-	switch (user)
+	/*switch (user)
 	{
 	case "":
 	user = "state 1";
 	setCookie("username", user, 1);
 	break;
 	//finish this
+	case "state 1":
+	document.getElementById("demo").innerHTML = "state 1 checked";
+	break;
+	case "state 2":
+	document.getElementById("demo").innerHTML = "state 2 checked";
+	break;
 	default:
 	alert("default");
 	}
 	
+	if (user == "state 1")
+	{
+		document.getElementById("demo").innerHTML = "state 1 if checked";
+	}*/
+	
+	
 	
 	//example code
-	/*if (user != "") 
+	if (user != "") 
 	{
 		document.getElementById("demo").innerHTML = "in if";
         alert("Welcome again " + user);
@@ -81,7 +98,7 @@ function checkMyCookie()
 		{
             setCookie("username", user, 1);
         }
-	}*/
+	}
 	
 }
 
@@ -101,20 +118,21 @@ function getCookie(cname)
 	var ca = decodedCookie.split(";");
 	for (var i = 0; i < ca.length; i++)
 	{
+		document.getElementById("demo").innerHTML = " in getCookie for";
 		var c = ca[i];
-		while (c.charAt(0) == ' ')
+		while (c.charAt(0) == '')
 		{
-			
+			document.getElementById("demo").innerHTML = " in getCookie while1";
 			c = c.subString(1);
 		}
 		if(c.indexOf(name) == 0)
 		{
-			
+			document.getElementById("demo").innerHTML = " in getCookie if";
 			return c.substring(name.lenght, c.lenght);
 		}
 	}
-	document.getElementById("demo").innerHTML = " in getCookie while";
-	return "";
+	//document.getElementById("demo").innerHTML = " in getCookie while";
+	return "error";
 }
 
 
