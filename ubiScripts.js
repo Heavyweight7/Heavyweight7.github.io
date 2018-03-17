@@ -59,6 +59,19 @@ function getStored()
 }
 }
 
+function changeStored()
+{
+	if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("lastname", "new store");
+    // Retrieve
+    document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
+	alert(localStorage.getItem("lastname"));
+} else {
+    document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+}
+
 
 
 /*
