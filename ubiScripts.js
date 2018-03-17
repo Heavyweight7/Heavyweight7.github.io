@@ -25,12 +25,26 @@ function newPage()
 //TODO: check if new user has a cookie, if yes check value of that cookie and skip to a specified place 
 //in the code based on that value, if no then create new cookie. also update cookie each time 
 //the player does something important.
+//jump to a new file instead
+
+
 
 //display current state
-function checkState()
+
+function editState(newState)
 {
 	var user = getCookie("username");
+	user = newState;
+	setCookie("username", user, 1);
+}
+
+function checkState()
+{
+	
+	var user = getCookie("username");
+	document.getElementById("demo").innerHTML = " ran getCookie";
 	document.getElementById("demo2").innerHTML = user;
+	alert("test");
 }
 
 
@@ -81,21 +95,25 @@ function setCookie(cname, cvalue, exdays)
 
 function getCookie(cname)
 {
+	
 	var name = cname + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
 	var ca = decodedCookie.split(";");
 	for (var i = 0; i < ca.length; i++)
 	{
 		var c = ca[i];
-		while (c.charAt(0) == '')
+		while (c.charAt(0) == ' ')
 		{
+			
 			c = c.subString(1);
 		}
 		if(c.indexOf(name) == 0)
 		{
+			
 			return c.substring(name.lenght, c.lenght);
 		}
 	}
+	document.getElementById("demo").innerHTML = " in getCookie while";
 	return "";
 }
 
