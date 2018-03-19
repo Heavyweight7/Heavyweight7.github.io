@@ -27,21 +27,34 @@ function newPage()
 	window.location.href = "http://heavyweight7.github.io/ubiWaiting";
 }
 
-/*function StateManager()
+function StateManager()
 {
 	//check what the current state is and move to the appropriate paige. only run in index.
+	if (typeof(Storage) !== "undefined")
+	{
 	switch (localStorage.getItem("lastname"))
 	{
-		case: "state 1"
+		case"state 1":
 		//go to start
 		document.getElementById("demo").innerHTML = "state 1";
 		break;
 		
 		default:
-		localStorage.setItem("lastname", "state 1");
+
 		//go to start
 	}
-}*/
+
+	/*if (localStorage.getItem("lastname") == "state 1")
+	{
+	document.getElementById("demo").innerHTML = "state 1";
+	}*/
+
+	}
+	else
+	{
+	document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+	}
+}
 
 //TODO: check if new user has a cookie, if yes check value of that cookie and skip to a specified place 
 //in the code based on that value, if no then create new cookie. also update cookie each time 
