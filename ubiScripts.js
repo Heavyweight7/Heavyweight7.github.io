@@ -15,6 +15,40 @@ function checkIfDone()
 }
 
 //TODO: create buttons that create buttons that create buttons
+//or override the onclick event with a new one.
+//NEW PLAN: switch cases out the ass. when button is pressed check state: do things and change button text. then change state.
+//state is keept in localStorage
+//long term timer is newDate = date + (i * time in seconds) 
+function changeButton()
+{
+	if (typeof(Storage) !== "undefined")
+	{
+	switch (localStorage.getItem("lastname"))
+	{
+		case"state 1":
+		//go to start
+		document.getElementById("demo").innerHTML = "state 1";
+		document.getElementById("new").innerHTML = "state 1";
+		break;
+		
+		default:
+		document.getElementById("demo").innerHTML = "default";
+		document.getElementById("new").innerHTML = "default";
+		changeStored("state 1");
+		//go to start
+	}
+	}
+	else
+	{
+	document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+	}
+
+	
+	//var t = document.createTextNode(text);
+	
+	//figure out how to change button text
+}
+
 
 
 function myFunction()
@@ -27,6 +61,11 @@ function newPage()
 	window.location.href = "http://heavyweight7.github.io/ubiWaiting";
 }
 
+//can make multiple cases do the same thing like so
+//case 1:
+//case 2:
+//case 3: do things
+//break;
 function StateManager()
 {
 	//check what the current state is and move to the appropriate paige. only run in index.
@@ -107,7 +146,7 @@ function changeStored(newStore)
     localStorage.setItem("lastname",  newStore);
     // Retrieve
     document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
-	alert(localStorage.getItem("lastname"));
+	//alert(localStorage.getItem("lastname"));
 } else {
     document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
 }
