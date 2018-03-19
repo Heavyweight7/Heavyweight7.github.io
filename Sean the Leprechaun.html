@@ -15,7 +15,15 @@
 
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
-</script><tw-passagedata pid="1" name="Something glimmering" tags="" position="411,201" size="100,100">	(set: $bellrung to false)
+</script>
+
+<script type="text/javascript" src="ubiScripts.js">
+///write all js code in here
+
+
+</script>
+
+<tw-passagedata pid="1" name="Something glimmering" tags="" position="411,201" size="100,100">	(set: $bellrung to false)
 A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.
 	[[Pick it up]]
 	[[Leave it]]
@@ -34,7 +42,7 @@ A glimmer on the ground catches your eye. It seems to be some small object, made
 	[[Put it in your pocket]]
 
 
-</tw-passagedata><tw-passagedata pid="5" name="Put it in your pocket" tags="" position="358,496" size="100,100">Set timer [x] hours.
+</tw-passagedata><tw-passagedata pid="5" name="Put it in your pocket" tags="" position="358,496" size="100,100" >Set timer [x] hours.
 
 	(if: $bellrung is true)[
 	[[later]]

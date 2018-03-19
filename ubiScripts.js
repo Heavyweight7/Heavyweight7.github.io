@@ -3,6 +3,7 @@ function checkIfDone()
 	/*document.addEventListener("click", function(){
 	document.getElementById("demo2").innerHTML = "jhfhjfd";
 	});*/
+	//document.getElementById("demo").innerHTML = "asdf";
 	var btn = document.createElement("BUTTON");
 	var t = document.createTextNode("new");
 	btn.appendChild(t);
@@ -10,7 +11,11 @@ function checkIfDone()
 	var elm = document.getElementById("button2");
 	elm.parentNode.removeChild(elm);
 	
+	
 }
+
+//TODO: create buttons that create buttons that create buttons
+
 
 function myFunction()
 {
@@ -22,18 +27,36 @@ function newPage()
 	window.location.href = "http://heavyweight7.github.io/ubiWaiting";
 }
 
+/*function StateManager()
+{
+	//check what the current state is and move to the appropriate paige. only run in index.
+	switch (localStorage.getItem("lastname"))
+	{
+		case: "state 1"
+		//go to start
+		document.getElementById("demo").innerHTML = "state 1";
+		break;
+		
+		default:
+		localStorage.setItem("lastname", "state 1");
+		//go to start
+	}
+}*/
+
 //TODO: check if new user has a cookie, if yes check value of that cookie and skip to a specified place 
 //in the code based on that value, if no then create new cookie. also update cookie each time 
 //the player does something important.
 //jump to a new file instead
 
+//TODO: check stored value, skip to new place based on stored value. otherwise created new stored value.
+//also update stored value based on progress.
 
 
 //display current state
 
 function localStore()
 {
-	document.getElementById("demo").innerHTML = "in local store";
+	//document.getElementById("demo").innerHTML = "in local store";
 	// Check browser support
 if (typeof(Storage) !== "undefined") {
     // Store
@@ -45,6 +68,11 @@ if (typeof(Storage) !== "undefined") {
 }
 }
 
+
+function testBtn()
+{
+	document.getElementById("demo").innerHTML = "testBtn";
+}
 
 function getStored()
 {
@@ -59,11 +87,11 @@ function getStored()
 }
 }
 
-function changeStored()
+function changeStored(newStore)
 {
 	if (typeof(Storage) !== "undefined") {
     // Store
-    localStorage.setItem("lastname", "new store");
+    localStorage.setItem("lastname",  newStore);
     // Retrieve
     document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
 	alert(localStorage.getItem("lastname"));
