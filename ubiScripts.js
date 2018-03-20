@@ -111,10 +111,14 @@ function newPage()
 
 function nextPaige(newState)
 {
-	changeStored(newState);
 
+	changeStored(newState);
+	
 	switch (localStorage.getItem("lastname"))
 	{
+	case"state 1":
+	alert(localStorage.getItem("lastname"));
+	break;
 	case"state 2":
 	window.location.href = "http://heavyweight7.github.io/ubiWaiting";
 	break;
