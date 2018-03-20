@@ -130,7 +130,7 @@ localStore();
 		/*document.getElementById("demo").innerHTML = "A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.";
 		document.getElementById("b1").innerHTML = "Pick it up";
 		document.getElementById("b2").innerHTML = "Leave it";*/
-		window.location.href = "http://heavyweight7.github.io/Sean The Leprechaun.html";//first twine
+		window.location.href = "http://heavyweight7.github.io/Twine1";//first twine
 		break;
 
 		case"state 2":
