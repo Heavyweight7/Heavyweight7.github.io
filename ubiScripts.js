@@ -107,6 +107,21 @@ function newPage()
 	window.location.href = "http://heavyweight7.github.io/ubiWaiting";
 }
 
+function nextPaige(newState)
+{
+	changeStored(newState);
+
+	switch (localStorage.getItem("lastname"))
+	{
+	case"state 2":
+	window.location.href = "http://heavyweight7.github.io/ubiWaiting";
+	break;
+
+	default: 
+	alert("If you get this message that means you've encountered an error. Please pass this along to Affra so that he can fix it and/or kill himself:  Paige:" + localStorage.getItem("lastname"));
+	}
+}
+
 //can make multiple cases do the same thing like so
 //case 1:
 //case 2:
