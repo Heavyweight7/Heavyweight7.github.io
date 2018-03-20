@@ -18,8 +18,8 @@ function checkIfDone()
 //or override the onclick event with a new one.
 //NEW PLAN: switch cases out the ass. when button is pressed check state: do things and change button text. then change state.
 //state is keept in localStorage
-//long term timer is newDate = date + (i * time in seconds) 
-function changeButton()
+//long term timer is newDate = date + (i * time in seconds) if (date >= newDate) do things
+function changeButton(btn)
 {
 	if (typeof(Storage) !== "undefined")
 	{
@@ -27,15 +27,45 @@ function changeButton()
 	{
 		case"state 1":
 		//go to start
+		if(btn == "b1")
+		{
 		document.getElementById("demo").innerHTML = "state 1";
-		document.getElementById("new").innerHTML = "state 1";
+		document.getElementById("b1").innerHTML = "button 1";
+		}
+		else
+		{
+		document.getElementById("b2").innerHTML = "button 2";
+		changeStored("state 2");
+		document.getElementById("demo").innerHTML = "state 2";
+		}
 		break;
 		
+		case "state 2":
+		if(btn == "b1")
+		{
+		document.getElementById("demo").innerHTML = "state 2";
+		document.getElementById("b1").innerHTML = "button 3";
+		document.getElementById("demo").innerHTML = "state 3";
+		}
+		else
+		{
+		document.getElementById("b2").innerHTML = "button 3";
+		document.getElementById("b1").innerHTML = "";
+		changeStored("state 3");
+		document.getElementById("demo").innerHTML = "state 3";
+		}
+		break;
+
+		case "state 3":
+
+		break;
+
 		default:
 		document.getElementById("demo").innerHTML = "default";
-		document.getElementById("new").innerHTML = "default";
+		document.getElementById("b1").innerHTML = "default";
+		document.getElementById("b2").innerHTML = "default";
 		changeStored("state 1");
-		//go to start
+		//Change to be an error pop-up
 	}
 	}
 	else
@@ -47,6 +77,20 @@ function changeButton()
 	//var t = document.createTextNode(text);
 	
 	//figure out how to change button text
+}
+
+
+
+function setDate()
+{
+if (typeof(Storage) !== "undefined") {
+    // Store
+    localStorage.setItem("date", new Date());
+    // Retrieve
+    //document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
+} else {
+    document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
 }
 
 
