@@ -117,14 +117,15 @@ function nextPaige(newState)
 	switch (localStorage.getItem("lastname"))
 	{
 	case"state 1":
-	alert(localStorage.getItem("lastname"));
+	document.getElementById("tectboxonload").innerHTML = localStorage.getItem("lastname");
 	break;
 	case"state 2":
+	document.getElementById("tectboxonload").innerHTML = localStorage.getItem("lastname");
 	window.location.href = "http://heavyweight7.github.io/ubiWaiting";
 	break;
 
 	default: 
-	alert("If you get this message that means you've encountered an error. Please pass this along to Affra so that he can fix it and/or kill himself:  Paige:" + localStorage.getItem("lastname"));
+	document.getElementById("tectboxonload").innerHTML = "If you get this message that means you've encountered an error. Please pass this along to Affra so that he can fix it and/or kill himself:  Paige:" + localStorage.getItem("lastname");
 	}
 }
 
