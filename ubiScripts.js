@@ -111,22 +111,35 @@ function newPage()
 
 function nextPaige(newState)
 {
-
-	changeStored(newState);
+	//alert("nextPaige");
 	
+	changeStored(newState);
+	//alert("nextPaige");
 	switch (localStorage.getItem("lastname"))
 	{
-	case"state 1":
-	document.getElementById("tectboxonload").innerHTML = localStorage.getItem("lastname");
-	break;
+	
+	
+	
+	
 	case"state 2":
-	document.getElementById("tectboxonload").innerHTML = localStorage.getItem("lastname");
+	
 	window.location.href = "http://heavyweight7.github.io/ubiWaiting";
 	break;
 
+	case "state 3":
+	alert("state 3");
+	break;
+
+	case "state 4":
+	alert("state 4");
+	break;
+
 	default: 
-	document.getElementById("tectboxonload").innerHTML = "If you get this message that means you've encountered an error. Please pass this along to Affra so that he can fix it and/or kill himself:  Paige:" + localStorage.getItem("lastname");
+	alert("If you get this message that means you've encountered an error. Please pass this along to Affra so that he can fix it and/or kill himself:  Paige:" + localStorage.getItem("lastname"));
 	}
+
+	
+	
 }
 
 //can make multiple cases do the same thing like so
@@ -253,7 +266,7 @@ function changeStored(newStore)
     // Store
     localStorage.setItem("lastname",  newStore);
     // Retrieve
-    document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
+    //document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
 	//alert(localStorage.getItem("lastname"));
 } else {
     alert("Sorry, your browser does not support Web Storage, please use a browser that runs html5");
