@@ -30,11 +30,11 @@ function changeButton(btn)
 		if(btn == "b1")
 		{
 		document.getElementById("demo").innerHTML = "A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.";
-		document.getElementById("b1").innerHTML = "button 1";
+		document.getElementById("b1").innerHTML = "Pick it up";
 		}
 		else
 		{
-		document.getElementById("b2").innerHTML = "button 2";
+		document.getElementById("b2").innerHTML = "Leave it";
 		changeStored("state 2");
 		document.getElementById("demo").innerHTML = "state 2";
 		}
