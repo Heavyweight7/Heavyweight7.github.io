@@ -107,7 +107,7 @@ function nextPaige(newState)
 	break;
 
 	case "state 4":
-	alert("state 4");
+	
 	break;
 
 	default: 
@@ -149,11 +149,11 @@ localStore();
 		break;
 
 		case"state 3":
-
+		window.location.href = "http://heavyweight7.github.io/Twine3";
 		break;
 
 		case"state 4":
-
+		window.location.href = "http://heavyweight7.github.io/Stage3dist";
 		break;
 
 		case"state 5":
