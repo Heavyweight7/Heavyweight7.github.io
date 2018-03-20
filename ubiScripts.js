@@ -45,7 +45,7 @@ function changeButton(btn)
 		{
 		document.getElementById("demo").innerHTML = "state 2";
 		document.getElementById("b1").innerHTML = "button 3";
-		document.getElementById("demo").innerHTML = "state 3";
+		//document.getElementById("demo").innerHTML = "state 3";
 		}
 		else
 		{
@@ -127,7 +127,25 @@ localStore();
 	{
 		case"state 1":
 		//go to start
-		document.getElementById("demo").innerHTML = "A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.";
+		/*document.getElementById("demo").innerHTML = "A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.";
+		document.getElementById("b1").innerHTML = "Pick it up";
+		document.getElementById("b2").innerHTML = "Leave it";*/
+		window.location.href = "http://heavyweight7.github.io/Sean The Leprechaun.html";//first twine
+		break;
+
+		case"state 2":
+
+		break;
+
+		case"state 3":
+
+		break;
+
+		case"state 4":
+
+		break;
+
+		case"state 5":
 
 		break;
 
