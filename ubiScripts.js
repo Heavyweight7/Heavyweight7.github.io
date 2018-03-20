@@ -30,12 +30,14 @@ function changeButton(btn)
 		if(btn == "b1")
 		{
 		document.getElementById("demo").innerHTML = "A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.";
+		changeStored("state 2");
 		document.getElementById("b1").innerHTML = "Pick it up";
+		document.getElementById("b2").innerHTML = "Leave it";
 		}
 		else
 		{
 		document.getElementById("b2").innerHTML = "Leave it";
-		changeStored("state 2");
+		changeStored("state 3");
 		document.getElementById("demo").innerHTML = "state 2";
 		}
 		break;
@@ -58,7 +60,7 @@ function changeButton(btn)
 
 		case "state 3":
 		changeStored("state 1");
-		
+
 		break;
 
 		default:

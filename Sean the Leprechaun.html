@@ -13,22 +13,19 @@
 
 <tw-storydata name="Sean the Leprechaun" startnode="1" creator="Twine" creator-version="2.2.1" ifid="D5DF6E4A-5456-437D-A707-8AB13847C78F" zoom="1" format="Harlowe" format-version="1.2.4" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">
 
-</script>
-
-<script type="text/javascript" src="ubiScripts.js">
-///write all js code in here
 
 
-</script>
-
-<tw-passagedata pid="1" name="Something glimmering" tags="" position="411,201" size="100,100">	(set: $bellrung to false)
+</script><tw-passagedata pid="1" name="Something glimmering" tags="" position="411,201" size="100,100">	(set: $bellrung to 0)
+	(set: $bellrungwait to 0)
 A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.
 	[[Pick it up]]
 	[[Leave it]]
 
-</tw-passagedata><tw-passagedata pid="2" name="Pick it up" tags="" position="337,349" size="100,100">It’s a small, delicately made bell. It seems almost weightless, despite clearly being made of metal.
+</tw-passagedata><tw-passagedata pid="2" name="Pick it up" tags="" position="336,349" size="100,100">It’s a small, delicately made bell. It seems almost weightless, despite clearly being made of metal.
 
 	[[Ring the bell]]
 	[[Put it in your pocket]]
@@ -36,13 +33,17 @@ A glimmer on the ground catches your eye. It seems to be some small object, made
 </tw-passagedata><tw-passagedata pid="3" name="Leave it" tags="" position="487,350" size="100,100">” ’Scuse me, sir, I think you dropped this.” You turn around to see a young woman. In her outstretched hand is a small silver bell.
 
 	[[Take the bell]]
-</tw-passagedata><tw-passagedata pid="4" name="Ring the bell" tags="" position="214,500" size="100,100">The sound is clear, and seems louder than you would have expected. Nobody around you seems to notice, though.
+</tw-passagedata><tw-passagedata pid="4" name="Ring the bell" tags="" position="214,500" size="100,100">The sound is clear, and seems louder than you would have expected, though nobody around you seems to notice.
 
-	(set: $bellrung to true)
-	[[Put it in your pocket]]
+	(set: $bellrung to 1)
+	(set: $bellrungwait to 1)
+	[[Ring it again]]
+	[[Wait]]
 
 
-</tw-passagedata><tw-passagedata pid="5" name="Put it in your pocket" tags="" position="358,496" size="100,100" >Set timer [x] hours.
+
+
+</tw-passagedata><tw-passagedata pid="5" name="Put it in your pocket" tags="" position="357,496" size="100,100">Set timer [x] hours.
 
 	(if: $bellrung is true)[
 	[[later]]
@@ -71,7 +72,7 @@ He takes a breath and seems to restrain himself, though his voice isn&#39;t quit
 &quot;Now what the fuck did you want?!&quot;
 
 [[Well, see, I found this thing..]]
-[[I don&#39;t quite understand]]</tw-passagedata><tw-passagedata pid="11" name="later, didn&#39;t ring bell" tags="" position="184,645" size="100,100">Putting your hand in your pocket, you touch cold metal. It&#39;s the bell you found. It&#39;s a fine piece of work, without being all that ostentatious.
+[[I don&#39;t quite understand]]</tw-passagedata><tw-passagedata pid="11" name="later, didn&#39;t ring bell" tags="" position="93,897" size="100,100">Putting your hand in your pocket, you touch cold metal. It&#39;s the bell you found. It&#39;s a fine piece of work, without being all that ostentatious.
 
 	[[Ring the bell 2]]</tw-passagedata><tw-passagedata pid="12" name="Ring the bell 2" tags="" position="227,799" size="100,100">The sound is clear, and seems louder than you would have expected. Nobody around you seems to notice, though.
 
@@ -81,13 +82,17 @@ He takes a breath and seems to restrain himself, though his voice isn&#39;t quit
 	[[Eh?]]
 	[[Can I help you?]]
 
-</tw-passagedata><tw-passagedata pid="14" name="Well, see, I found this thing.." tags="" position="600,1105" size="100,100">&quot;Found this thing?! And you figured you&#39;d just see what the fuck it did?! Never fucking mind what that might fucking be?!&quot;
+</tw-passagedata><tw-passagedata pid="14" name="Well, see, I found this thing.." tags="" position="598,1104" size="100,100">&quot;Found this thing?! And you figured you&#39;d just see what the fuck it did?! Never fucking mind what that might fucking be?!&quot;
 
 His voice drops, as if he&#39;s talking to himself. Still loud enough to hear, though.
 
-&quot;The fucking English, any fucking justice in the world and they&#39;d fall into the fucking pits they dig, blabla
+&quot;The fucking English, any fucking justice in the world and they&#39;d fall into the fucking pits they dig...&quot;
 
-</tw-passagedata><tw-passagedata pid="15" name="I don&#39;t quite understand" tags="" position="750,1105" size="100,100">His look turn for a moment from aggression to exasperation.
+His voice trails off as he turns around and starts walking away from you.
+He turns back and gives you a stare, holding it for a good moment before turning again.
+&quot;Wanker!&quot;, you hear him exclaim, before he turns a corner and dissapears.
+
+[[End section 1]]</tw-passagedata><tw-passagedata pid="15" name="I don&#39;t quite understand" tags="" position="750,1105" size="100,100">His look turn for a moment from aggression to exasperation.
 &quot;Well colour me fucking surprised, cause you look like a daft fucker. 
 You rang the fucking bell. Here I fucking am.&quot;
 
@@ -96,7 +101,68 @@ The exasperation leaves his face, and the agression returns.
 
 He turns around and starts walking away, muttering loud enough for you to make out the word fucker, more than once.
 
-</tw-passagedata></tw-storydata>
+[[End section 1]]</tw-passagedata><tw-passagedata pid="16" name="End section 1" tags="" position="661,1284" size="100,100">You have the distinct feeling that ringing the bell again just now, whilst possibly entertaining, might not be the best idea.
+
+Maybe later though...
+
+[[Put the bell away|http://www.duckduckgo.com/]]</tw-passagedata><tw-passagedata pid="17" name="Untitled Passage" tags="" position="412,1299" size="100,100">&quot;This better be fucking good...&quot;
+
+He&#39;s lost the beanie, and his hair is standing is standing in every possible direction, while at the same time seeming almost dreadlock-like. Just like the almost-muttonchops, it seems less like a conscious choice of style than a lack of personal grooming.
+
+[[Terribly sorry to bother you]]
+[[I&#39;m curious...]]</tw-passagedata><tw-passagedata pid="18" name="Terribly sorry to bother you" tags="" position="218,1450" size="100,100">&quot;Not sorry enough not to, though, are ya?&quot;
+
+He doesn&#39;t seem quite as agressive as last time, though he does add a perfunctory &quot;ye fucker&quot; under his breath.
+
+[[It&#39;s just that I&#39;m a bit curious-&gt;I&#39;m curious...]] </tw-passagedata><tw-passagedata pid="19" name="I&#39;m curious..." tags="" position="487,1449" size="100,100">&quot;Oh, aye?! Curious are we? You know what curiosity did to the mouse, don&#39;t ya?&quot;
+
+[[You mean the cat?]]
+[[Killed it?]]</tw-passagedata><tw-passagedata pid="20" name="You mean the cat?" tags="" position="412,1599" size="100,100">&quot;Did I say the fucking cat? If I meant the fucking cat, I&#39;d&#39;ve said the fucking cat, wouldn&#39;t I&#39;ve?! Think I don&#39;t know what&#39;s what, eh?&quot;
+
+He might have been a bit calmer than last, but you seem to have worked him back up to what you might now assume is his normal level of agitation.
+
+&quot;Fucker... Thinks a man don&#39;t know what fucking animal he&#39;s talking about in his own fucking analogy.&quot;
+
+[[Sorry, what happend to the mouse?-&gt;Killed it?]]
+</tw-passagedata><tw-passagedata pid="21" name="Killed it?" tags="" position="562,1599" size="100,100">&quot;Well, if it killed the fucking cat, it would&#39;ve fucking massacred the mouse, wouldn&#39;t it?&quot;
+
+[[I guess so..]]</tw-passagedata><tw-passagedata pid="22" name="I guess so.." tags="" position="563,1749" size="100,100">&quot;Too fucking right, you guess so. Now what the fuck were you so fucking curious about?&quot;
+(set: $imSean to false)
+(set: $onBoat to false)
+
+[[Who are you?]]
+[[How did you get here?]]</tw-passagedata><tw-passagedata pid="23" name="Who are you?" tags="" position="486,1899" size="100,100">&quot;Name&#39;s Sean.&quot;
+
+(set: $imSean to true)
+[[Hi Sean. I&#39;m Adam]]
+(if: $onBoat is false)[
+[[How did you get here?]] 
+]</tw-passagedata><tw-passagedata pid="24" name="How did you get here?" tags="" position="637,1899" size="100,100">&quot;Came on a boat, didn&#39;t I? Same as everybody else.&quot;
+(set: $onBoat to true)
+(if: $imSean is false)[
+[[Who are you?]] 
+]
+
+[[Alright]]
+</tw-passagedata><tw-passagedata pid="25" name="Hi Sean. I&#39;m Adam" tags="" position="481,2049" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="26" name="Alright" tags="" position="637,2049" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Ring it again" tags="" position="74,650" size="100,100">You ring the bell again. The sound seems louder and clearer, but nothing seems to be happening.
+	(set: $bellrung to it+1)
+	(set: $bellrungwait to it+1)
+	
+	(if: $bellrung is 3)[[[Ring it again-&gt;later]]]
+	(if: $bellrungwait is 5)[[[Wait-&gt;later]]]
+	
+	(if: $bellrung is not 3)[[[Ring it again]]]
+	(if: $bellrungwait is not 5)[[[Wait]]]
+
+</tw-passagedata><tw-passagedata pid="28" name="Wait" tags="" position="289,650" size="100,100">Nothing seems to be happening.
+
+	(set: $bellrungwait to it+1)
+	
+	(if: $bellrung is 3)[[[Ring it again-&gt;later]]]
+	(if: $bellrungwait is 5)[[[Wait-&gt;later]]]
+	
+	(if: $bellrung is not 3)[[[Ring it again]]]
+	(if: $bellrungwait is not 5)[[[Wait]]]</tw-passagedata><tw-passagedata pid="29" name="[Ring it again" tags="" position="45,780" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="30" name="[Wait" tags="" position="364,800" size="100,100">Double-click this passage to edit it.</tw-passagedata></tw-storydata>
 
 <script title="Twine engine code" data-main="harlowe">"use strict";function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}var _slicedToArray=function(){function e(e,t){var n=[],r=!0,o=!1,i=void 0;try{for(var a,s=e[Symbol.iterator]();!(r=(a=s.next()).done)&&(n.push(a.value),!t||n.length!==t);r=!0);}catch(e){o=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(o)throw i}}return n}return function(t,n){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,n);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};!function(){/**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
