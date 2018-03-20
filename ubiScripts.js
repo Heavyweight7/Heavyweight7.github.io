@@ -19,7 +19,7 @@ function checkIfDone()
 //NEW PLAN: switch cases out the ass. when button is pressed check state: do things and change button text. then change state.
 //state is keept in localStorage
 //long term timer is newDate = date + (i * time in milliseconds) if (date >= newDate) do things
-function changeButton(btn)
+function changeButton()
 {
 	if (typeof(Storage) !== "undefined")
 	{
@@ -27,40 +27,16 @@ function changeButton(btn)
 	{
 		case"state 1":
 		//go to start
-		if(btn == "b1")
-		{
-		document.getElementById("demo").innerHTML = "A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.";
-		changeStored("state 2");
-		document.getElementById("b1").innerHTML = "Pick it up";
-		document.getElementById("b2").innerHTML = "Leave it";
-		}
-		else
-		{
-		document.getElementById("b2").innerHTML = "Leave it";
-		changeStored("state 3");
-		document.getElementById("demo").innerHTML = "state 2";
-		}
+		
 		break;
 
 		case "state 2":
-		if(btn == "b1")
-		{
-		document.getElementById("demo").innerHTML = "state 2";
-		document.getElementById("b1").innerHTML = "button 3";
-		//document.getElementById("demo").innerHTML = "state 3";
-		}
-		else
-		{
-		document.getElementById("b2").innerHTML = "button 3";
-		document.getElementById("b1").innerHTML = "";
-		changeStored("state 3");
-		document.getElementById("demo").innerHTML = "state 3";
-		}
+		
 		break;
 
 		case "state 3":
-		changeStored("state 1");
-
+		
+		window.location.href = "http://heavyweight7.github.io/Twine3";
 		break;
 
 		default:
@@ -127,7 +103,7 @@ function nextPaige(newState)
 	break;
 
 	case "state 3":
-	alert("state 3");
+	alert("It is now safe to turn off your device. Alternativly press the button to keep playing.");
 	break;
 
 	case "state 4":
@@ -165,7 +141,7 @@ localStore();
 		/*document.getElementById("demo").innerHTML = "A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.";
 		document.getElementById("b1").innerHTML = "Pick it up";
 		document.getElementById("b2").innerHTML = "Leave it";*/
-		window.location.href = "http://heavyweight7.github.io/Twine1";//first twine
+		window.location.href = "http://heavyweight7.github.io/Twine2";//first twine
 		break;
 
 		case"state 2":
