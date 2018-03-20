@@ -57,7 +57,8 @@ function changeButton(btn)
 		break;
 
 		case "state 3":
-		if(btn == "b1")
+		changeStored("state 1");
+		/*if(btn == "b1")
 		{
 		var newDate = Date.parse(localStorage.getItem("date")) + 5000;//doesnt work
 		 if (Date() >= newDate)
@@ -72,7 +73,7 @@ function changeButton(btn)
 		 {
 		 document.getElementById("demo").innerHTML = "new date succ";
 		 }
-		}
+		}*/
 		break;
 
 		default:
@@ -106,7 +107,10 @@ if (typeof(Storage) !== "undefined") {
 }
 }
 
-
+function reset()
+{
+changeStored("state 1");
+}
 
 function myFunction()
 {
@@ -198,6 +202,7 @@ function getStored()
 
 function changeStored(newStore)
 {
+//document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
 	if (typeof(Storage) !== "undefined") {
     // Store
     localStorage.setItem("lastname",  newStore);
