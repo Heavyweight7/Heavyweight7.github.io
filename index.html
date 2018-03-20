@@ -2,7 +2,7 @@
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<body>
+<body onload="StateManager();">
 
 
 
@@ -20,6 +20,7 @@
 <p id="demo"></p>
 <p id="demo2"><br> <br></p>
 <br>
+<button type="button" onclick=deleteState()>delete state</button>
 <button type="button" onclick=reset()>reset</button>
 <button type="button" onclick=setDate()>store date</button>
 <button type="button" onclick=getStored()>get stored</button>

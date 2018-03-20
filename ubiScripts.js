@@ -58,33 +58,18 @@ function changeButton(btn)
 
 		case "state 3":
 		changeStored("state 1");
-		/*if(btn == "b1")
-		{
-		var newDate = Date.parse(localStorage.getItem("date")) + 5000;//doesnt work
-		 if (Date() >= newDate)
-		 {
-		 document.getElementById("demo").innerHTML = "new date succ";
-		 }
-		}
-		else
-		{
-		var newDate = Date.parse(localStorage.getItem("date")) + 5000;
-		 if (Date() >= newDate)
-		 {
-		 document.getElementById("demo").innerHTML = "new date succ";
-		 }
-		}*/
+		
 		break;
 
 		default:
-		alert("If you get this message that means you've encountered an error. Please pass this along to Affra so that he can fix it and/or kill himself:  " + localStorage.getItem("lastname"));
+		alert("If you get this message that means you've encountered an error. Please pass this along to Affra so that he can fix it and/or kill himself:  Button:" + localStorage.getItem("lastname"));
 		//changeStored("state 1");
 		//Change to be an error pop-up
 	}
 	}
 	else
 	{
-	document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+	alert("Sorry, your browser does not support Web Storage, please use a browser that runs html5");
 	}
 
 
@@ -103,7 +88,7 @@ if (typeof(Storage) !== "undefined") {
     // Retrieve
     //document.getElementById("demo2").innerHTML = localStorage.getItem("date");
 } else {
-    document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+    alert("Sorry, your browser does not support Web Storage, please use a browser that runs html5");
 }
 }
 
@@ -132,15 +117,22 @@ function StateManager()
 	//check what the current state is and move to the appropriate paige. only run in index.
 	if (typeof(Storage) !== "undefined")
 	{
+	if (!localStorage.getItem("lastname"))
+{
+document.getElementById("demo2").innerHTML = "init state";
+localStore();
+}
+
 	switch (localStorage.getItem("lastname"))
 	{
 		case"state 1":
 		//go to start
-		document.getElementById("demo").innerHTML = "state 1";
+		document.getElementById("demo").innerHTML = "A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.";
+
 		break;
 
 		default:
-
+		alert("If you get this message that means you've encountered an error. Please pass this along to Affra so that he can fix it and/or kill himself:  StateManager:" + localStorage.getItem("lastname"));
 		//go to start
 	}
 
@@ -152,9 +144,23 @@ function StateManager()
 	}
 	else
 	{
-	document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+	alert("Sorry, your browser does not support Web Storage, please use a browser that runs html5");
 	}
 }
+
+
+function initialState()
+{
+//document.getElementById("demo2").innerHTML = "init state b if";
+
+}
+
+function deleteState()
+{
+localStorage.removeItem("lastname");
+}
+
+
 
 //TODO: check if new user has a cookie, if yes check value of that cookie and skip to a specified place
 //in the code based on that value, if no then create new cookie. also update cookie each time
@@ -173,11 +179,11 @@ function localStore()
 	// Check browser support
 if (typeof(Storage) !== "undefined") {
     // Store
-    localStorage.setItem("lastname", "Smith");
+    localStorage.setItem("lastname", "state 1");
     // Retrieve
-    document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
+    //document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
 } else {
-    document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+    alert("Sorry, your browser does not support Web Storage, please use a browser that runs html5");
 }
 }
 
@@ -196,7 +202,7 @@ function getStored()
     document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
 	alert(localStorage.getItem("lastname"));
 } else {
-    document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+    alert("Sorry, your browser does not support Web Storage, please use a browser that runs html5");
 }
 }
 
@@ -210,7 +216,7 @@ function changeStored(newStore)
     document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
 	//alert(localStorage.getItem("lastname"));
 } else {
-    document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
+    alert("Sorry, your browser does not support Web Storage, please use a browser that runs html5");
 }
 }
 
