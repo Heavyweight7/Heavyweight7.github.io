@@ -10,8 +10,8 @@ function checkIfDone()
 	document.body.appendChild(btn);
 	var elm = document.getElementById("button2");
 	elm.parentNode.removeChild(elm);
-	
-	
+
+
 }
 
 //TODO: create buttons that create buttons that create buttons
@@ -29,7 +29,7 @@ function changeButton(btn)
 		//go to start
 		if(btn == "b1")
 		{
-		document.getElementById("demo").innerHTML = "state 1";
+		document.getElementById("demo").innerHTML = "A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.";
 		document.getElementById("b1").innerHTML = "button 1";
 		}
 		else
@@ -39,7 +39,7 @@ function changeButton(btn)
 		document.getElementById("demo").innerHTML = "state 2";
 		}
 		break;
-		
+
 		case "state 2":
 		if(btn == "b1")
 		{
@@ -73,9 +73,9 @@ function changeButton(btn)
 	document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
 	}
 
-	
+
 	//var t = document.createTextNode(text);
-	
+
 	//figure out how to change button text
 }
 
@@ -121,7 +121,7 @@ function StateManager()
 		//go to start
 		document.getElementById("demo").innerHTML = "state 1";
 		break;
-		
+
 		default:
 
 		//go to start
@@ -139,8 +139,8 @@ function StateManager()
 	}
 }
 
-//TODO: check if new user has a cookie, if yes check value of that cookie and skip to a specified place 
-//in the code based on that value, if no then create new cookie. also update cookie each time 
+//TODO: check if new user has a cookie, if yes check value of that cookie and skip to a specified place
+//in the code based on that value, if no then create new cookie. also update cookie each time
 //the player does something important.
 //jump to a new file instead
 
@@ -244,30 +244,30 @@ function checkMyCookie()
 	default:
 	alert("default");
 	}
-	
+
 	if (user == "state 1")
 	{
 		document.getElementById("demo").innerHTML = "state 1 if checked";
 	}
-	
-	
-	
+
+
+
 	//example code
-	if (user != "") 
+	if (user != "")
 	{
 		document.getElementById("demo").innerHTML = "in if";
         alert("Welcome again " + user);
-    } 
-	else 
+    }
+	else
 	{
 		document.getElementById("demo").innerHTML = "in else";
         user = prompt("Please enter your name:", "");
-        if (user != "" && user != null) 
+        if (user != "" && user != null)
 		{
             setCookie("username", user, 1);
         }
 	}
-	
+
 }
 
 function setCookie(cname, cvalue, exdays)
@@ -275,12 +275,12 @@ function setCookie(cname, cvalue, exdays)
 	var d = new Date();
 	d.setTime(d.getTime() + (exdays*24*60*60*1000));
 	var expires = "expires=" + d.toUTCString();
-	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"; 
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 function getCookie(cname)
 {
-	
+
 	var name = cname + "=";
 	var decodedCookie = decodeURIComponent(document.cookie);
 	var ca = decodedCookie.split(";");
@@ -302,10 +302,3 @@ function getCookie(cname)
 	//document.getElementById("demo").innerHTML = " in getCookie while";
 	return "error";
 }*/
-
-
-
-
-
-
-
