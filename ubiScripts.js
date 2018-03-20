@@ -18,7 +18,7 @@ function checkIfDone()
 //or override the onclick event with a new one.
 //NEW PLAN: switch cases out the ass. when button is pressed check state: do things and change button text. then change state.
 //state is keept in localStorage
-//long term timer is newDate = date + (i * time in seconds) if (date >= newDate) do things
+//long term timer is newDate = date + (i * time in milliseconds) if (date >= newDate) do things
 function changeButton(btn)
 {
 	if (typeof(Storage) !== "undefined")
@@ -57,14 +57,27 @@ function changeButton(btn)
 		break;
 
 		case "state 3":
-
+		if(btn == "b1")
+		{
+		var newDate = Date.parse(localStorage.getItem("date")) + 5000;//doesnt work
+		 if (Date() >= newDate)
+		 {
+		 document.getElementById("demo").innerHTML = "new date succ";
+		 }
+		}
+		else
+		{
+		var newDate = Date.parse(localStorage.getItem("date")) + 5000;
+		 if (Date() >= newDate)
+		 {
+		 document.getElementById("demo").innerHTML = "new date succ";
+		 }
+		}
 		break;
 
 		default:
-		document.getElementById("demo").innerHTML = "default";
-		document.getElementById("b1").innerHTML = "default";
-		document.getElementById("b2").innerHTML = "default";
-		changeStored("state 1");
+		alert("If you get this message that means you've encountered an error. Please pass this along to Affra so that he can fix it and/or kill himself:  " + localStorage.getItem("lastname"));
+		//changeStored("state 1");
 		//Change to be an error pop-up
 	}
 	}
@@ -87,7 +100,7 @@ if (typeof(Storage) !== "undefined") {
     // Store
     localStorage.setItem("date", new Date());
     // Retrieve
-    //document.getElementById("demo2").innerHTML = localStorage.getItem("lastname");
+    //document.getElementById("demo2").innerHTML = localStorage.getItem("date");
 } else {
     document.getElementById("demo").innerHTML = "Sorry, your browser does not support Web Storage...";
 }
