@@ -11,7 +11,11 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Sean part 1" startnode="1" creator="Twine" creator-version="2.2.1" ifid="D5DF6E4A-5456-437D-A707-8AB13847C78F" zoom="1" format="Harlowe" format-version="1.2.4" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="Sean part 1" startnode="1" creator="Twine" creator-version="2.2.1" ifid="D5DF6E4A-5456-437D-A707-8AB13847C78F" zoom="1" format="Harlowe" format-version="1.2.4" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body, tw-story
+{
+  font-size: 24px;
+}
+
 
 
 
@@ -43,25 +47,29 @@
 
 
 
+
 </script><tw-passagedata pid="1" name="Something glimmering" tags="" position="277,27" size="100,100">(set: $bellrung to 0)
 \	(set: $bellrungwait to 0)
 A glimmer on the ground catches your eye. It seems to be some small object, made of some silvery metal.
 
 	[[Pick it up]]
+	
 	[[Leave it]]
 
 </tw-passagedata><tw-passagedata pid="2" name="Pick it up" tags="" position="20,319" size="100,100">It’s a small, delicately made bell. It seems almost weightless, despite clearly being made of metal.
 
 	[[Ring the bell]]
+	
 	&lt;a href=&quot;https://heavyweight7.github.io/Stage2dist&quot;&gt;Put it in your pocket&lt;/a&gt;
 
 </tw-passagedata><tw-passagedata pid="3" name="Leave it" tags="" position="409,269" size="100,100">” ’Scuse me, sir, I think you dropped this.” You turn around to see a young woman. In her outstretched hand is a small silver bell.
 
 	[[Take the bell]]
-</tw-passagedata><tw-passagedata pid="4" name="Ring the bell" tags="" position="244,362" size="100,100">The sound is clear, and seems louder than you would have expected, though nobody around you seems to notice.\
+</tw-passagedata><tw-passagedata pid="4" name="Ring the bell" tags="" position="243,362" size="100,100">The sound is clear, and seems louder than you would have expected, though nobody around you seems to notice.\
 	(set: $bellrung to 1)
 	(set: $bellrungwait to 1)
 	[[Ring it again]]
+	
 	[[Wait]]
 
 
@@ -70,6 +78,7 @@ A glimmer on the ground catches your eye. It seems to be some small object, made
 </tw-passagedata><tw-passagedata pid="5" name="Take the bell" tags="" position="450,425" size="100,100">It is a bell. Small, and delicately made, it seems almost weightless, despite clearly being made of metal.
 
 	[[Ring the bell]]
+	
 	&lt;a href=&quot;https://heavyweight7.github.io/Stage2dist&quot;&gt;Put it in your pocket&lt;/a&gt;
 </tw-passagedata><tw-passagedata pid="6" name="later" tags="" position="392,628" size="100,100">”Fuck d’ya wan’?!”
 The accent is an almost impenetrable Irish, bordering on parody. There’s no mistaking the aggression in the voice though.
@@ -88,9 +97,11 @@ He takes a breath and seems to restrain himself, though his voice isn&#39;t quit
 &quot;Now what the fuck did you want?!&quot;
 
 [[Well, see, I found this thing...]]
+
 [[I don&#39;t quite understand]]</tw-passagedata><tw-passagedata pid="10" name="Turn around" tags="" position="651,661" size="100,100">You turn to see a tall, lanky fellow, dressed in a filthy jacket that could, at one time, have been described as green. Tufts of ginger hair stick out from under a beanie, matching sideburns that might have been called mutton-chops if they had seemed intentional. It doesn’t take much to see that he isn’t the type for regular showers, let alone shaves.
 
 	[[Eh?]]
+
 	[[Can I help you?]]
 
 </tw-passagedata><tw-passagedata pid="11" name="Well, see, I found this thing..." tags="" position="555,1100" size="100,100">&quot;Found this thing?! And you figured you&#39;d just see what the fuck it did?! Never fucking mind what that might fucking be?!&quot;

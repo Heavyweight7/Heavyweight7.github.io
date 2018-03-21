@@ -11,7 +11,11 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="Sean part 2" startnode="6" creator="Twine" creator-version="2.2.1" ifid="D5DF6E4A-5456-437D-A707-8AB13847C78F" zoom="1" format="Harlowe" format-version="1.2.4" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">
+<tw-storydata name="Sean part 2" startnode="6" creator="Twine" creator-version="2.2.1" ifid="D5DF6E4A-5456-437D-A707-8AB13847C78F" zoom="1" format="Harlowe" format-version="1.2.4" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body, tw-story
+{
+  font-size: 24px;
+}
+
 
 
 
@@ -37,11 +41,13 @@
 
 
 
+
 </script><tw-passagedata pid="1" name="Ring the bell" tags="" position="374,172" size="100,100">The sound is clear, and seems louder than you would have expected, though nobody around you seems to notice.
 
 \	(set: $bellrung to 1)
 \	(set: $bellrungwait to 1)
 	[[Ring it again]]
+
 	[[Wait]]
 
 
@@ -64,7 +70,8 @@ He takes a breath and seems to restrain himself, though his voice isn&#39;t quit
 &quot;Now what the fuck did you want?!&quot;
 
 [[Well, see, I found this thing...]]
-[[I don&#39;t quite understand]]</tw-passagedata><tw-passagedata pid="6" name="later, didn&#39;t ring bell" tags="" position="248,84" size="100,100">\
+
+[[I don&#39;t quite understand]]</tw-passagedata><tw-passagedata pid="6" name="later, didn&#39;t ring bell" tags="" position="248,84" size="100,100">
 (set: $bellrung to 0)
 \(set: $bellrungwait to 0)
 Putting your hand in your pocket, you touch cold metal. It&#39;s the bell you found. It&#39;s a fine piece of work, without being all that ostentatious.
@@ -72,6 +79,7 @@ Putting your hand in your pocket, you touch cold metal. It&#39;s the bell you fo
 	[[Ring the bell]]</tw-passagedata><tw-passagedata pid="7" name="Turn around" tags="" position="651,661" size="100,100">You turn to see a tall, lanky fellow, dressed in a filthy jacket that could, at one time, have been described as green. Tufts of ginger hair stick out from under a beanie, matching sideburns that might have been called mutton-chops if they had seemed intentional. It doesn’t take much to see that he isn’t the type for regular showers, let alone shaves.
 
 	[[Eh?]]
+
 	[[Can I help you?]]
 
 </tw-passagedata><tw-passagedata pid="8" name="Well, see, I found this thing..." tags="" position="598,1104" size="100,100">&quot;Found this thing?! And you figured you&#39;d just see what the fuck it did?! Never fucking mind what that might fucking be?!&quot;
