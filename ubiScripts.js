@@ -107,7 +107,7 @@ function nextPaige(newState)
 	break;
 
 	case "state 4":
-	
+	window.location.href = "http://heavyweight7.github.io/Twine4";
 	break;
 
 	default: 
